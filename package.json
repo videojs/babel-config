@@ -1,0 +1,63 @@
+{
+  "name": "@videojs/babel-config",
+  "version": "0.0.0",
+  "description": "A standard babel config, so that plugins don't need the same script in every repository.",
+  "scripts": {
+    "lint": "vjsstandard",
+    "test": "npm run test:unit && npm run test:verify",
+    "test:unit": "npm run lint",
+    "test:verify": "vjsverify --skip-es-check --verbose",
+    "preversion": "npm test",
+    "version": "is-prerelease || npm run update-changelog && git add CHANGELOG.md",
+    "update-changelog": "conventional-changelog -p videojs -i CHANGELOG.md -s",
+    "prepublishOnly": "npm run test:verify"
+  },
+  "bin": {
+    "babel-config-run": "./run.js",
+    "babel-config-es": "./es-run.js",
+    "babel-config-cjs": "./cjs-run.js"
+  },
+  "lint-staged": {
+    "*.js": [
+      "vjsstandard --fix",
+      "git add"
+    ],
+    "README.md": [
+      "doctoc",
+      "git add"
+    ]
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/videojs/babel-config"
+  },
+  "author": "Brandon Casey <brandonocasey@gmail.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/videojs/babel-config/issues"
+  },
+  "homepage": "https://github.com/videojs/babel-config",
+  "dependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/plugin-transform-modules-commonjs": "^7.10.4",
+    "babel-plugin-add-module-exports": "^1.0.4",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-transform-object-assign": "^7.10.4",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7.11.2"
+  },
+  "devDependencies": {
+    "@videojs/generator-helpers": "^1.1.0",
+    "videojs-generator-verify": "~1.2.0",
+    "videojs-standard": "^8.0.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  }
+}
