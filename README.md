@@ -42,7 +42,7 @@ if (config.builds.module) {
 ```json
 {
   "build:cjs": "babel-config-cjs -d ./dist/cjs ./src",
-  "build:es": "babel-config-es -d ./dist/cjs ./src",
+  "build:es": "babel-config-es -d ./dist/es ./src",
   "watch:cjs": "npm run build:cjs -- -w",
   "watch:es": "npm run build:es -- -w"
 }
