@@ -1,6 +1,6 @@
 {
   "name": "@videojs/babel-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A standard babel config, so that plugins don't need the same script in every repository.",
   "scripts": {
     "lint": "vjsstandard",
