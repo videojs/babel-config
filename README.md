@@ -53,7 +53,7 @@ if (config.builds.module) {
 5. verify that `browser` in `package.json` is set to the browser dist. Something like `dist/project-name.js`
 
 ## Important things
-* When running through `babel-config-cjs`, `babel-config-es`, or `babel-config-run` if `TEST_BUNDLE_ONLY` is set **nothing** will run!
+* When running through `babel-config-cjs`, `babel-config-es`, or `babel-config-run` if the `TEST_BUNDLE_ONLY` environment variable is set **nothing** will run! This is to maintain parity with [`videojs-generate-rollup-config`](https://github.com/videojs/videojs-generate-rollup-config).
 * The `babel-config-cjs` binary runs babel cli with `--verbose` and `--config-file` set to the cjs config exported here.
 * The `babel-config-es` binary runs babel cli with `--verbose` and `--config-file` set to the es config exported here.
 * The `babel-config-run` binary runs babel cli with `--verbose` but no config file.
@@ -61,6 +61,4 @@ if (config.builds.module) {
 ## Changing configuration
 1. require the configuration you want to use `const config = require('@videojs/babel-config/cjs.js');`
 2. Make changes to it and export: `module.export = config`.
-3. pass `--config-file <path>` in the above scripts so that everything points to your new configs.
-4. change the above script to use `babel-config-run`
-
+3. Change the build scripts to  `babel-config-run --config-file <new-config> ...`
