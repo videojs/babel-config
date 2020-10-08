@@ -1,7 +1,7 @@
 const path = require('path');
-const transformObjectAssign = require('@babel/plugin-transform-object-assign');
-const transformRuntime = require('@babel/plugin-transform-runtime');
-const presetEnv = require('@babel/preset-env');
+const transformObjectAssign = require.resolve('@babel/plugin-transform-object-assign');
+const transformRuntime = require.resolve('@babel/plugin-transform-runtime');
+const presetEnv = require.resolve('@babel/preset-env');
 
 module.exports = {
   exclude: path.join(process.cwd(), 'node_modules/**'),

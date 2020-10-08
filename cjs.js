@@ -1,6 +1,6 @@
 const es = require('./es.js');
-const transformModulesCommonjs = require('@babel/plugin-transform-modules-commonjs');
-const pluginDefaultModuleExports = require('babel-plugin-add-module-exports');
+const transformModulesCommonjs = require.resolve('@babel/plugin-transform-modules-commonjs');
+const pluginDefaultModuleExports = require.resolve('babel-plugin-add-module-exports');
 
 const config = Object.assign({}, es);
 
