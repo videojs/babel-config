@@ -17,8 +17,6 @@ Maintenance Status: Stable
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Important things](#important-things)
-- [Changing configuration](#changing-configuration)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -41,8 +39,8 @@ if (config.builds.module) {
 
 ```json
 {
-  "build:cjs": "babel-config-cjs -d ./dist/cjs ./src",
-  "build:es": "babel-config-es -d ./dist/es ./src",
+  "build:cjs": "babel-config-cjs -d ./cjs ./src",
+  "build:es": "babel-config-es -d ./es ./src",
   "watch:cjs": "npm run build:cjs -- -w",
   "watch:es": "npm run build:es -- -w"
 }
@@ -51,6 +49,11 @@ if (config.builds.module) {
 3. verify that `main` in `package.json` is set to the cjs dist. Something like `dist/cjs/index.js`
 4. verify that `module` in `package.json` is set to the es dist. Something like `dist/es/index.js`
 5. verify that `browser` in `package.json` is set to the browser dist. Something like `dist/project-name.js`
+6. Add `/es` and `/cjs` to `.gitignore`.
+7. Add `./es` and `./cjs` to the npm script for `clean` after `mkdir -p` and `rm -rf`.
+```
+shx rm -rf ./dist ./test/dist ./cjs ./es && shx mkdir -p ./dist ./test/dist ./cjs ./es
+``
 
 ## Important things
 * When running through `babel-config-cjs`, `babel-config-es`, or `babel-config-run` if the `TEST_BUNDLE_ONLY` environment variable is set **nothing** will run! This is to maintain parity with [`videojs-generate-rollup-config`](https://github.com/videojs/videojs-generate-rollup-config).
