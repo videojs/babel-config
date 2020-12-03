@@ -32,7 +32,7 @@ $ npm install --save-dev @babel/cli @videojs/babel-config
 1. In your rollup config add a line to delete module builds:
 ```js
 if (config.builds.module) {
-	delete config.builds.module;
+  delete config.builds.module;
 }
 ```
 2. Add a npm scripts for cjs/es dists to your package.json:
@@ -46,8 +46,8 @@ if (config.builds.module) {
 }
 ```
 
-3. verify that `main` in `package.json` is set to the cjs dist. Something like `dist/cjs/index.js`
-4. verify that `module` in `package.json` is set to the es dist. Something like `dist/es/index.js`
+3. verify that `main` in `package.json` is set to the cjs dist. Something like `cjs/index.js`
+4. verify that `module` in `package.json` is set to the es dist. Something like `es/index.js`
 5. verify that `browser` in `package.json` is set to the browser dist. Something like `dist/project-name.js`
 6. Make sure that `es/` and `cjs/` are in `files` in package.json
 7. Add `/es` and `/cjs` to `.gitignore`.
