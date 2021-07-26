@@ -54,9 +54,9 @@ if (config.builds.module) {
 8. Add `/es` and `/cjs` to `.gitignore`.
 9. Add `./es` and `./cjs` to the npm script for `clean` after `mkdir -p` and `rm -rf`.
 
-```
+```sh
 shx rm -rf ./dist ./test/dist ./cjs ./es && shx mkdir -p ./dist ./test/dist ./cjs ./es
-``
+```
 
 
 ## Important things
