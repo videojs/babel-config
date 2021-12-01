@@ -1,3 +1,21 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/videojs/babel-config/compare/v0.2.0...v1.0.0) (2021-12-01)
+
+### Features
+
+* Update default browserslist ([#1](https://github.com/videojs/babel-config/issues/1)) ([6d8f86c](https://github.com/videojs/babel-config/commit/6d8f86c))
+
+### Documentation
+
+* add missing back tick ([98533cc](https://github.com/videojs/babel-config/commit/98533cc))
+* add step about vjsstandard ([ffa1d74](https://github.com/videojs/babel-config/commit/ffa1d74))
+* remove inconsistency in readme ([4a6a2c3](https://github.com/videojs/babel-config/commit/4a6a2c3))
+
+
+### BREAKING CHANGES
+
+* This change removes support for some older browsers, including IE 11.
+
 <a name="0.2.0"></a>
 # [0.2.0](https://github.com/videojs/babel-config/compare/v0.1.2...v0.2.0) (2020-10-08)
 
