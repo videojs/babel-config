@@ -1,3 +1,10 @@
+<a name="1.0.1"></a>
+## [1.0.1](https://github.com/videojs/babel-config/compare/v1.0.0...v1.0.1) (2023-04-11)
+
+### Chores
+
+* remove kaios query ([#3](https://github.com/videojs/babel-config/issues/3)) ([66315cb](https://github.com/videojs/babel-config/commit/66315cb))
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/videojs/babel-config/compare/v0.2.0...v1.0.0) (2021-12-01)
 
