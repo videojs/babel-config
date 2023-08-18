@@ -1,3 +1,10 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/videojs/babel-config/compare/v1.0.1...v1.0.2) (2023-08-18)
+
+### Chores
+
+* remove opera mobile 64, because it is no longer available in the list of browsers from can I use ([#4](https://github.com/videojs/babel-config/issues/4)) ([b960176](https://github.com/videojs/babel-config/commit/b960176))
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/videojs/babel-config/compare/v1.0.0...v1.0.1) (2023-04-11)
 
