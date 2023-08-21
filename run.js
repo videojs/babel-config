@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 const spawnSync = require('child_process').spawnSync;
-const babelcli = require.resolve('@babel/cli/bin/babel.js');
+
+const babelcli = (process.platform === 'win32') ? require.resolve('.bin/babel.cmd') : require.resolve('@babel/cli/bin/babel.js');
 
 const run = function(args) {
   if (process.env.TEST_BUNDLE_ONLY) {
